@@ -9,22 +9,41 @@ export default function BookPositioning({ onBuyClick }) {
       style={{
         backgroundColor: '#FFFFFF',
         borderTop: '1px solid var(--border-light)',
-        borderBottom: '1px solid var(--border-light)'
+        borderBottom: '1px solid var(--border-light)',
+        textAlign: 'center'
       }}
     >
       <div className="container">
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: 'clamp(24px, 4vw, 56px)',
-            alignItems: 'center'
-          }}
-        >
-          {/* Book Image */}
+        <div style={{ maxWidth: '880px', margin: '0 auto' }}>
+          {/* Eyebrow */}
+          <div className="eyebrow" style={{ justifyContent: 'center' }}>
+            <span className="eyebrow-dot"></span>
+            {SITE_CONFIG.TITLE}
+          </div>
+
+          {/* Headline */}
+          <h2
+            style={{
+              fontSize: 'clamp(1.55rem, 4vw, 3.4rem)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.025em',
+              color: 'var(--text-dark)',
+              fontWeight: 800,
+              marginBottom: '24px',
+              textTransform: 'uppercase'
+            }}
+          >
+            RAISING THE <span style={{ color: 'var(--accent-amber)' }}>NEXT GENERATION</span> <br className="desktop-only" />
+            IN A WORLD THAT HAS ALREADY CHANGED
+          </h2>
+
+          {/* Centered Book Cover Showcase */}
           <div
-            style={{ gridColumn: 'span 5', display: 'flex', justifyContent: 'center' }}
-            className="positioning-book-col"
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginBottom: '32px'
+            }}
           >
             <div className="book-cover-frame">
               <div className="book-glow-backdrop"></div>
@@ -37,69 +56,37 @@ export default function BookPositioning({ onBuyClick }) {
             </div>
           </div>
 
-          {/* Positioning Content */}
-          <div style={{ gridColumn: 'span 7' }} className="positioning-text-col">
-            <div className="eyebrow">
-              <span className="eyebrow-dot"></span>
-              {SITE_CONFIG.TITLE}
-            </div>
-
-            <h2
+          {/* Major Visual Statement */}
+          <div
+            style={{
+              padding: '24px 28px',
+              backgroundColor: 'var(--bg-light)',
+              borderLeft: '4px solid var(--accent-terracotta)',
+              marginBottom: '28px',
+              maxWidth: '780px',
+              margin: '0 auto 28px'
+            }}
+          >
+            <h3
+              className="serif-italic"
               style={{
-                fontSize: 'clamp(1.45rem, 3.5vw, 3rem)',
-                lineHeight: 1.12,
-                letterSpacing: '-0.025em',
+                fontSize: 'clamp(1.15rem, 1.8vw, 1.7rem)',
+                lineHeight: 1.4,
                 color: 'var(--text-dark)',
-                fontWeight: 800,
-                marginBottom: '20px',
-                textTransform: 'uppercase'
+                margin: 0,
+                fontWeight: 600
               }}
             >
-              RAISING THE <span style={{ color: 'var(--accent-amber)' }}>NEXT GENERATION</span> <br className="desktop-only" />
-              IN A WORLD THAT HAS ALREADY CHANGED
-            </h2>
-
-            {/* Major Visual Statement */}
-            <div
-              style={{
-                padding: '24px 28px',
-                backgroundColor: 'var(--bg-light)',
-                borderLeft: '4px solid var(--accent-terracotta)',
-                marginBottom: '28px'
-              }}
-            >
-              <h3
-                className="serif-italic"
-                style={{
-                  fontSize: 'clamp(1.15rem, 1.8vw, 1.7rem)',
-                  lineHeight: 1.4,
-                  color: 'var(--text-dark)',
-                  margin: 0,
-                  fontWeight: 600
-                }}
-              >
-                “Don't prepare your child for the world you survived. Prepare them for the world they will inherit.”
-              </h3>
-            </div>
-
-            <button onClick={onBuyClick} className="btn-primary">
-              BUY SALVAGE AGENDA NOW
-              <ArrowRight size={16} />
-            </button>
+              “Don't prepare your child for the world you survived. Prepare them for the world they will inherit.”
+            </h3>
           </div>
+
+          <button onClick={onBuyClick} className="btn-primary">
+            BUY SALVAGE AGENDA NOW
+            <ArrowRight size={16} />
+          </button>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 960px) {
-          .positioning-book-col, .positioning-text-col {
-            grid-column: span 12 !important;
-          }
-          .positioning-book-col {
-            margin-bottom: 24px;
-          }
-        }
-      `}</style>
     </section>
   );
 }

@@ -9,58 +9,50 @@ export default function BookIntro({ onBuyClick }) {
       className="section-shell"
       style={{
         backgroundColor: 'var(--bg-light)',
-        position: 'relative'
+        position: 'relative',
+        textAlign: 'center'
       }}
     >
       <div className="container">
-        {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 48px' }}>
-          <div className="eyebrow" style={{ justifyContent: 'center' }}>
-            <span className="eyebrow-dot"></span>
-            INTRODUCING THE BOOK
+        <div style={{ maxWidth: '880px', margin: '0 auto' }}>
+          {/* Section Header */}
+          <div style={{ marginBottom: '40px' }}>
+            <div className="eyebrow" style={{ justifyContent: 'center' }}>
+              <span className="eyebrow-dot"></span>
+              INTRODUCING THE BOOK
+            </div>
+            <h2
+              style={{
+                fontSize: 'clamp(1.8rem, 4.5vw, 3.8rem)',
+                lineHeight: 1.08,
+                letterSpacing: '-0.025em',
+                color: 'var(--text-dark)',
+                fontWeight: 800,
+                marginBottom: '12px',
+                textTransform: 'uppercase'
+              }}
+            >
+              THE SALVAGE AGENDA
+            </h2>
+            <p
+              style={{
+                fontSize: 'clamp(1rem, 1.3vw, 1.25rem)',
+                color: 'var(--accent-terracotta)',
+                fontWeight: 600,
+                lineHeight: 1.4
+              }}
+            >
+              {SITE_CONFIG.SUBTITLE}
+            </p>
           </div>
-          <h2
-            style={{
-              fontSize: 'clamp(1.8rem, 4.5vw, 3.8rem)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.025em',
-              color: 'var(--text-dark)',
-              fontWeight: 800,
-              marginBottom: '12px',
-              textTransform: 'uppercase'
-            }}
-          >
-            THE SALVAGE AGENDA
-          </h2>
-          <p
-            style={{
-              fontSize: 'clamp(1rem, 1.3vw, 1.25rem)',
-              color: 'var(--accent-terracotta)',
-              fontWeight: 600,
-              lineHeight: 1.4
-            }}
-          >
-            {SITE_CONFIG.SUBTITLE}
-          </p>
-        </div>
 
-        {/* Grid Layout: Large Book Reveal & Core Clarifications */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: 'clamp(24px, 4vw, 56px)',
-            alignItems: 'center'
-          }}
-        >
-          {/* Left Column: Book Image Showcase */}
+          {/* Centered Book Showcase */}
           <div
             style={{
-              gridColumn: 'span 5',
               display: 'flex',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              marginBottom: '40px'
             }}
-            className="intro-book-col"
           >
             <div className="book-cover-frame">
               <div className="book-glow-backdrop"></div>
@@ -73,13 +65,8 @@ export default function BookIntro({ onBuyClick }) {
             </div>
           </div>
 
-          {/* Right Column: Narrative & What This Book Is NOT */}
-          <div
-            style={{
-              gridColumn: 'span 7'
-            }}
-            className="intro-text-col"
-          >
+          {/* Narrative & What This Book Is NOT (Centered Container) */}
+          <div style={{ maxWidth: '780px', margin: '0 auto', textAlign: 'center' }}>
             <h3
               style={{
                 fontSize: 'clamp(1.3rem, 2vw, 1.8rem)',
@@ -92,7 +79,7 @@ export default function BookIntro({ onBuyClick }) {
               And this is where <span style={{ color: 'var(--accent-amber)' }}>SALVAGE Agenda</span> begins.
             </h3>
 
-            <p style={{ fontSize: 'clamp(0.92rem, 1.05vw, 1.02rem)', color: 'var(--text-muted)', marginBottom: '24px' }}>
+            <p style={{ fontSize: 'clamp(0.92rem, 1.05vw, 1.02rem)', color: 'var(--text-muted)', marginBottom: '28px' }}>
               Most parenting advice fails because it swings between two dangerous extremes: total rigid traditionalism or unstructured permissiveness. SALVAGE Agenda cuts through the noise with practical wisdom.
             </p>
 
@@ -116,7 +103,8 @@ export default function BookIntro({ onBuyClick }) {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '12px',
-                marginBottom: '28px'
+                marginBottom: '28px',
+                textAlign: 'left'
               }}
             >
               {[
@@ -129,16 +117,16 @@ export default function BookIntro({ onBuyClick }) {
                   key={idx}
                   style={{
                     display: 'flex',
-                    alignItems: 'flex-start',
+                    alignItems: 'center',
                     gap: '12px',
-                    padding: '14px 16px',
+                    padding: '14px 18px',
                     backgroundColor: '#FFFFFF',
                     border: '1px solid var(--border-light)',
                     borderRadius: '2px',
                     boxShadow: '0 2px 6px rgba(0,0,0,0.02)'
                   }}
                 >
-                  <XCircle size={18} color="var(--accent-terracotta)" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <XCircle size={18} color="var(--accent-terracotta)" style={{ flexShrink: 0 }} />
                   <span style={{ fontSize: 'clamp(0.88rem, 1vw, 0.98rem)', fontWeight: 600, color: 'var(--text-dark)', lineHeight: 1.45 }}>
                     {text}
                   </span>
@@ -153,7 +141,8 @@ export default function BookIntro({ onBuyClick }) {
                 backgroundColor: 'var(--bg-dark)',
                 color: '#FFFFFF',
                 borderRadius: '4px',
-                marginBottom: '28px'
+                marginBottom: '28px',
+                textAlign: 'center'
               }}
             >
               <h4
@@ -180,17 +169,6 @@ export default function BookIntro({ onBuyClick }) {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 960px) {
-          .intro-book-col, .intro-text-col {
-            grid-column: span 12 !important;
-          }
-          .intro-book-col {
-            margin-bottom: 24px;
-          }
-        }
-      `}</style>
     </section>
   );
 }
