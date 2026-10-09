@@ -13,22 +13,22 @@ export default function WorldUpgraded() {
     >
       <div className="container">
         {/* Large Typographic Statement */}
-        <div style={{ maxWidth: '900px', marginBottom: '60px' }}>
+        <div style={{ maxWidth: '900px', marginBottom: '48px' }}>
           <div className="eyebrow">
             <span className="eyebrow-dot"></span>
             THE REALIZATION
           </div>
           <h2
             style={{
-              fontSize: 'clamp(2.2rem, 4.5vw, 4.2rem)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.03em',
+              fontSize: 'clamp(1.45rem, 4.2vw, 3.6rem)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.025em',
               color: 'var(--text-dark)',
               fontWeight: 800,
               textTransform: 'uppercase'
             }}
           >
-            THE WORLD UPGRADED. <br />
+            THE WORLD UPGRADED. <br className="desktop-only" />
             <span style={{ color: 'var(--accent-amber)' }}>DID YOUR PARENTING?</span>
           </h2>
         </div>
@@ -37,15 +37,15 @@ export default function WorldUpgraded() {
         <div
           style={{
             maxWidth: '820px',
-            marginBottom: '64px',
-            paddingLeft: '24px',
+            marginBottom: '48px',
+            paddingLeft: 'clamp(16px, 3vw, 24px)',
             borderLeft: '3px solid var(--accent-terracotta)'
           }}
         >
           <p
             className="serif-italic"
             style={{
-              fontSize: 'clamp(1.3rem, 2vw, 1.75rem)',
+              fontSize: 'clamp(1.1rem, 1.8vw, 1.6rem)',
               lineHeight: 1.45,
               color: 'var(--text-dark)',
               fontWeight: 400
@@ -59,22 +59,22 @@ export default function WorldUpgraded() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '24px',
-            marginBottom: '64px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '20px',
+            marginBottom: '48px'
           }}
         >
           {[
             { label: "WORK CHANGED", sub: "Remote, automated, and globalized." },
             { label: "SCHOOL CHANGED", sub: "Digital learning and instant information." },
             { label: "BUSINESS CHANGED", sub: "New financial models and platforms." },
-            { label: "COMMUNICATION CHANGED", sub: "Instant messaging, algorithms, and social feeds." },
-            { label: "TECHNOLOGY ACCELERATED", sub: "AI and machine intelligence rewriting rules." }
+            { label: "COMMUNICATION CHANGED", sub: "Instant messaging, algorithms, and feeds." },
+            { label: "TECHNOLOGY ACCELERATED", sub: "AI rewriting fundamental rules." }
           ].map((item, index) => (
             <div
               key={index}
               style={{
-                padding: '28px 24px',
+                padding: '24px 20px',
                 backgroundColor: 'var(--bg-light)',
                 border: '1px solid var(--border-light)',
                 borderRadius: '2px',
@@ -88,7 +88,7 @@ export default function WorldUpgraded() {
                   fontWeight: 800,
                   color: 'var(--accent-amber)',
                   display: 'block',
-                  marginBottom: '10px',
+                  marginBottom: '8px',
                   letterSpacing: '0.1em'
                 }}
               >
@@ -96,7 +96,7 @@ export default function WorldUpgraded() {
               </span>
               <h3
                 style={{
-                  fontSize: '1.15rem',
+                  fontSize: '1.05rem',
                   fontWeight: 800,
                   color: 'var(--text-dark)',
                   marginBottom: '6px',
@@ -105,7 +105,7 @@ export default function WorldUpgraded() {
               >
                 {item.label}
               </h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0 }}>
                 {item.sub}
               </p>
             </div>
@@ -117,8 +117,8 @@ export default function WorldUpgraded() {
           style={{
             textAlign: 'center',
             maxWidth: '780px',
-            margin: '0 auto 64px',
-            padding: '32px',
+            margin: '0 auto 48px',
+            padding: '24px clamp(16px, 3vw, 32px)',
             backgroundColor: 'var(--bg-light)',
             borderRadius: '4px',
             border: '1px dashed rgba(18, 20, 23, 0.15)'
@@ -126,7 +126,7 @@ export default function WorldUpgraded() {
         >
           <p
             style={{
-              fontSize: 'clamp(1.15rem, 1.5vw, 1.35rem)',
+              fontSize: 'clamp(1rem, 1.3vw, 1.25rem)',
               fontWeight: 700,
               color: 'var(--text-dark)',
               margin: 0
@@ -140,14 +140,14 @@ export default function WorldUpgraded() {
         <div style={{ maxWidth: '850px', margin: '0 auto' }}>
           <span
             style={{
-              fontSize: '0.8rem',
+              fontSize: '0.75rem',
               fontWeight: 700,
-              letterSpacing: '0.12em',
+              letterSpacing: '0.1em',
               textTransform: 'uppercase',
               color: 'var(--text-muted)',
               display: 'block',
               textAlign: 'center',
-              marginBottom: '24px'
+              marginBottom: '20px'
             }}
           >
             STATEMENTS FAMILIAR TO ALMOST EVERY HOUSEHOLD
@@ -156,9 +156,9 @@ export default function WorldUpgraded() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '20px',
-              marginBottom: '40px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+              gap: '16px',
+              marginBottom: '36px'
             }}
           >
             {[
@@ -169,17 +169,17 @@ export default function WorldUpgraded() {
               <div
                 key={idx}
                 style={{
-                  padding: '24px',
+                  padding: '20px 16px',
                   backgroundColor: '#FFFFFF',
                   border: '1px solid var(--border-light)',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.03)',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
                   textAlign: 'center'
                 }}
               >
                 <p
                   className="serif-italic"
                   style={{
-                    fontSize: '1.25rem',
+                    fontSize: 'clamp(1.05rem, 1.3vw, 1.25rem)',
                     color: 'var(--text-dark)',
                     margin: 0,
                     fontWeight: 600
@@ -193,8 +193,8 @@ export default function WorldUpgraded() {
 
           <p
             style={{
-              fontSize: 'clamp(1.05rem, 1.2vw, 1.2rem)',
-              lineHeight: 1.7,
+              fontSize: 'clamp(0.95rem, 1.1vw, 1.1rem)',
+              lineHeight: 1.65,
               color: 'var(--text-dark)',
               textAlign: 'center',
               fontWeight: 500
@@ -203,17 +203,16 @@ export default function WorldUpgraded() {
             Those statements may contain wisdom. But they cannot be the entire parenting strategy for a child living in a completely different world.
           </p>
 
-          <div style={{ textAlign: 'center', marginTop: '48px' }}>
+          <div style={{ textAlign: 'center', marginTop: '36px' }}>
             <span
               style={{
                 fontFamily: 'var(--font-sans)',
-                fontSize: '0.85rem',
+                fontSize: '0.8rem',
                 fontWeight: 800,
-                letterSpacing: '0.2em',
+                letterSpacing: '0.15em',
                 textTransform: 'uppercase',
                 color: 'var(--accent-amber)',
-                display: 'inline-block',
-                position: 'relative'
+                display: 'inline-block'
               }}
             >
               EXACTLY WHY WE WROTE...

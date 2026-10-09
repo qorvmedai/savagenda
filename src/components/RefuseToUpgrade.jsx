@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function RefuseToUpgrade({ onBuyClick }) {
   const consequences = [
@@ -28,42 +28,42 @@ export default function RefuseToUpgrade({ onBuyClick }) {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           width: '75vw',
-          height: '450px',
+          height: '350px',
           background: 'radial-gradient(ellipse at center, rgba(217, 119, 6, 0.16) 0%, rgba(194, 94, 46, 0.05) 50%, transparent 80%)',
-          filter: 'blur(80px)',
+          filter: 'blur(70px)',
           pointerEvents: 'none'
         }}
       />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         {/* Section Header */}
-        <div style={{ maxWidth: '840px', margin: '0 auto 60px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '840px', margin: '0 auto 48px', textAlign: 'center' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>
             <span className="eyebrow-dot" style={{ backgroundColor: 'var(--accent-terracotta)' }}></span>
             THE HARD REALITY
           </div>
           <h2
             style={{
-              fontSize: 'clamp(2.3rem, 4.5vw, 4.2rem)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.03em',
+              fontSize: 'clamp(1.45rem, 4.2vw, 3.8rem)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.025em',
               fontWeight: 800,
               color: '#FFFFFF',
               textTransform: 'uppercase'
             }}
           >
-            BUT LET'S SAY <br />
+            BUT LET'S SAY <br className="desktop-only" />
             <span style={{ color: 'var(--accent-amber)' }}>YOU REFUSE TO UPGRADE.</span>
           </h2>
         </div>
 
         {/* Revealed Consequences List */}
-        <div style={{ maxWidth: '840px', margin: '0 auto 64px' }}>
+        <div style={{ maxWidth: '840px', margin: '0 auto 48px' }}>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '20px'
+              gap: '14px'
             }}
           >
             {consequences.map((item, idx) => (
@@ -72,8 +72,8 @@ export default function RefuseToUpgrade({ onBuyClick }) {
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
-                  gap: '18px',
-                  padding: '24px 28px',
+                  gap: '14px',
+                  padding: '18px 20px',
                   backgroundColor: 'var(--bg-dark-card)',
                   border: '1px solid var(--border-dark)',
                   borderRadius: '2px'
@@ -81,10 +81,10 @@ export default function RefuseToUpgrade({ onBuyClick }) {
               >
                 <div
                   style={{
-                    fontSize: '0.85rem',
+                    fontSize: '0.75rem',
                     fontWeight: 800,
                     color: 'var(--accent-amber)',
-                    padding: '4px 10px',
+                    padding: '3px 8px',
                     backgroundColor: 'rgba(217, 119, 6, 0.12)',
                     borderRadius: '2px',
                     flexShrink: 0
@@ -94,10 +94,10 @@ export default function RefuseToUpgrade({ onBuyClick }) {
                 </div>
                 <p
                   style={{
-                    fontSize: 'clamp(1.05rem, 1.2vw, 1.15rem)',
+                    fontSize: 'clamp(0.92rem, 1.05vw, 1.05rem)',
                     color: '#E5E7EB',
                     margin: 0,
-                    lineHeight: 1.6,
+                    lineHeight: 1.55,
                     fontWeight: 500
                   }}
                 >
@@ -112,8 +112,8 @@ export default function RefuseToUpgrade({ onBuyClick }) {
         <div
           style={{
             maxWidth: '920px',
-            margin: '0 auto 64px',
-            padding: 'clamp(36px, 5vw, 56px)',
+            margin: '0 auto 48px',
+            padding: 'clamp(24px, 4vw, 48px)',
             backgroundColor: 'rgba(217, 119, 6, 0.08)',
             borderLeft: '4px solid var(--accent-amber)',
             borderRadius: '0 4px 4px 0',
@@ -123,8 +123,8 @@ export default function RefuseToUpgrade({ onBuyClick }) {
           <p
             className="serif-italic"
             style={{
-              fontSize: 'clamp(1.4rem, 2.6vw, 2.2rem)',
-              lineHeight: 1.35,
+              fontSize: 'clamp(1.15rem, 2vw, 1.85rem)',
+              lineHeight: 1.4,
               color: '#FFFFFF',
               margin: 0,
               fontWeight: 500
@@ -144,13 +144,13 @@ export default function RefuseToUpgrade({ onBuyClick }) {
         >
           <p
             style={{
-              fontSize: 'clamp(1.15rem, 1.5vw, 1.35rem)',
+              fontSize: 'clamp(0.98rem, 1.2vw, 1.2rem)',
               lineHeight: 1.6,
               color: 'var(--text-light-muted)',
-              marginBottom: '36px'
+              marginBottom: '28px'
             }}
           >
-            The danger is not that you don't love your child. <br />
+            The danger is not that you don't love your child. <br className="desktop-only" />
             <strong style={{ color: '#FFFFFF' }}>
               The danger is that love, without an updated method of expression, may not produce the result you intended.
             </strong>
@@ -158,7 +158,7 @@ export default function RefuseToUpgrade({ onBuyClick }) {
 
           <button onClick={onBuyClick} className="btn-dark-primary">
             GET SALVAGE AGENDA NOW
-            <ArrowRight size={18} />
+            <ArrowRight size={16} />
           </button>
         </div>
       </div>

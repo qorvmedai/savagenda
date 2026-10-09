@@ -23,7 +23,7 @@ export default function TheRealQuestion() {
     >
       <div className="container">
         {/* Minimal Editorial Header */}
-        <div style={{ maxWidth: '900px', margin: '0 auto 64px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto 48px', textAlign: 'center' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>
             <span className="eyebrow-dot"></span>
             THE PERSPECTIVE SHIFT
@@ -31,11 +31,11 @@ export default function TheRealQuestion() {
 
           <p
             style={{
-              fontSize: 'clamp(1.1rem, 1.4vw, 1.35rem)',
-              letterSpacing: '0.1em',
+              fontSize: 'clamp(0.85rem, 1.1vw, 1.1rem)',
+              letterSpacing: '0.08em',
               textTransform: 'uppercase',
               color: 'var(--text-muted)',
-              marginBottom: '12px',
+              marginBottom: '10px',
               fontWeight: 700
             }}
           >
@@ -44,22 +44,22 @@ export default function TheRealQuestion() {
 
           <h2
             style={{
-              fontSize: 'clamp(1.8rem, 3.5vw, 3.2rem)',
+              fontSize: 'clamp(1.35rem, 3.5vw, 2.8rem)',
               lineHeight: 1.15,
               color: 'var(--text-dark)',
               fontWeight: 800,
-              marginBottom: '36px',
+              marginBottom: '24px',
               textTransform: 'uppercase'
             }}
           >
             “WILL MY CHILD BE SUCCESSFUL?”
           </h2>
 
-          <div style={{ margin: '32px 0' }}>
+          <div style={{ margin: '24px 0' }}>
             <span
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontSize: '1.5rem',
+                fontSize: 'clamp(1.2rem, 1.8vw, 1.5rem)',
                 fontStyle: 'italic',
                 color: 'var(--accent-terracotta)',
                 fontWeight: 600
@@ -71,25 +71,25 @@ export default function TheRealQuestion() {
 
           <h3
             style={{
-              fontSize: 'clamp(2rem, 4.2vw, 3.8rem)',
-              lineHeight: 1.1,
+              fontSize: 'clamp(1.45rem, 4vw, 3.4rem)',
+              lineHeight: 1.12,
               color: 'var(--accent-amber)',
               fontWeight: 800,
               textTransform: 'uppercase'
             }}
           >
-            “WHO WILL THEY BECOME <br />
+            “WHO WILL THEY BECOME <br className="desktop-only" />
             WHEN SUCCESS ARRIVES?”
           </h3>
         </div>
 
         {/* Questions Editorial List */}
-        <div style={{ maxWidth: '820px', margin: '0 auto 64px' }}>
+        <div style={{ maxWidth: '820px', margin: '0 auto 48px' }}>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '16px'
+              gap: '12px'
             }}
           >
             {questions.map((q, idx) => (
@@ -98,8 +98,8 @@ export default function TheRealQuestion() {
                 style={{
                   display: 'flex',
                   alignItems: 'baseline',
-                  gap: '16px',
-                  padding: '20px 24px',
+                  gap: '12px',
+                  padding: '16px 20px',
                   backgroundColor: '#FFFFFF',
                   border: '1px solid var(--border-light)',
                   borderRadius: '2px'
@@ -116,11 +116,11 @@ export default function TheRealQuestion() {
                 </span>
                 <p
                   style={{
-                    fontSize: 'clamp(1.05rem, 1.25vw, 1.2rem)',
+                    fontSize: 'clamp(0.92rem, 1.05vw, 1.08rem)',
                     fontWeight: 600,
                     color: 'var(--text-dark)',
                     margin: 0,
-                    lineHeight: 1.5
+                    lineHeight: 1.45
                   }}
                 >
                   {q}
@@ -136,7 +136,7 @@ export default function TheRealQuestion() {
             textAlign: 'center',
             maxWidth: '780px',
             margin: '0 auto',
-            padding: '28px 36px',
+            padding: '24px clamp(16px, 3vw, 32px)',
             backgroundColor: 'var(--text-dark)',
             color: '#FFFFFF',
             borderRadius: '4px'
@@ -145,7 +145,7 @@ export default function TheRealQuestion() {
           <p
             className="serif-italic"
             style={{
-              fontSize: 'clamp(1.3rem, 2vw, 1.75rem)',
+              fontSize: 'clamp(1.1rem, 1.8vw, 1.55rem)',
               color: 'var(--accent-amber)',
               margin: 0,
               fontWeight: 500

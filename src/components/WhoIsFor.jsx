@@ -14,7 +14,7 @@ export default function WhoIsFor({ onBuyClick }) {
       }}
     >
       <div className="container">
-        <div style={{ maxWidth: '840px', margin: '0 auto 60px' }}>
+        <div style={{ maxWidth: '840px', margin: '0 auto 48px' }}>
           <div className="eyebrow">
             <span className="eyebrow-dot"></span>
             TARGET AUDIENCE
@@ -22,30 +22,30 @@ export default function WhoIsFor({ onBuyClick }) {
 
           <h2
             style={{
-              fontSize: 'clamp(2.2rem, 4.2vw, 3.8rem)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.03em',
+              fontSize: 'clamp(1.45rem, 4vw, 3.4rem)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.025em',
               fontWeight: 800,
               color: 'var(--text-dark)',
-              marginBottom: '20px',
+              marginBottom: '16px',
               textTransform: 'uppercase'
             }}
           >
             THIS BOOK IS <span style={{ color: 'var(--accent-amber)' }}>FOR YOU IF...</span>
           </h2>
 
-          <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)' }}>
+          <p style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.08rem)', color: 'var(--text-muted)' }}>
             SALVAGE Agenda was written for intentional individuals who refuse to leave their child's future to chance.
           </p>
         </div>
 
         {/* Audience List */}
-        <div style={{ maxWidth: '900px', margin: '0 auto 60px' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto 48px' }}>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '20px'
+              gap: '14px'
             }}
           >
             {AUDIENCE_TARGETS.map((target, idx) => (
@@ -54,8 +54,8 @@ export default function WhoIsFor({ onBuyClick }) {
                 style={{
                   display: 'flex',
                   alignItems: 'flex-start',
-                  gap: '20px',
-                  padding: '24px 28px',
+                  gap: '14px',
+                  padding: '18px 20px',
                   backgroundColor: 'var(--bg-light)',
                   border: '1px solid var(--border-light)',
                   borderRadius: '2px',
@@ -65,7 +65,7 @@ export default function WhoIsFor({ onBuyClick }) {
               >
                 <div
                   style={{
-                    padding: '8px',
+                    padding: '6px',
                     borderRadius: '50%',
                     backgroundColor: 'rgba(217, 119, 6, 0.12)',
                     color: 'var(--accent-amber)',
@@ -73,16 +73,16 @@ export default function WhoIsFor({ onBuyClick }) {
                     marginTop: '2px'
                   }}
                 >
-                  <Check size={18} strokeWidth={3} />
+                  <Check size={16} strokeWidth={3} />
                 </div>
 
                 <p
                   style={{
-                    fontSize: 'clamp(1.05rem, 1.2vw, 1.18rem)',
+                    fontSize: 'clamp(0.92rem, 1.05vw, 1.08rem)',
                     fontWeight: 600,
                     color: 'var(--text-dark)',
                     margin: 0,
-                    lineHeight: 1.6
+                    lineHeight: 1.5
                   }}
                 >
                   {target}
@@ -95,7 +95,7 @@ export default function WhoIsFor({ onBuyClick }) {
         <div style={{ textAlign: 'center' }}>
           <button onClick={onBuyClick} className="btn-primary">
             CLAIM YOUR COPY OF SALVAGE AGENDA
-            <ArrowRight size={18} />
+            <ArrowRight size={16} />
           </button>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function WhoIsFor({ onBuyClick }) {
       <style>{`
         .audience-item:hover {
           border-color: var(--accent-amber);
-          transform: translateX(6px);
+          transform: translateX(4px);
         }
       `}</style>
     </section>

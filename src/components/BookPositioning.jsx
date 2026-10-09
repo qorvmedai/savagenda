@@ -17,7 +17,7 @@ export default function BookPositioning({ onBuyClick }) {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: 'clamp(32px, 5vw, 64px)',
+            gap: 'clamp(24px, 4vw, 56px)',
             alignItems: 'center'
           }}
         >
@@ -32,7 +32,6 @@ export default function BookPositioning({ onBuyClick }) {
                 src={SITE_CONFIG.BOOK_COVER_IMAGE}
                 alt="SALVAGE Agenda Book Cover"
                 className="book-cover-img"
-                style={{ maxWidth: '380px' }}
                 loading="lazy"
               />
             </div>
@@ -47,33 +46,33 @@ export default function BookPositioning({ onBuyClick }) {
 
             <h2
               style={{
-                fontSize: 'clamp(2rem, 3.5vw, 3.2rem)',
-                lineHeight: 1.1,
-                letterSpacing: '-0.03em',
+                fontSize: 'clamp(1.45rem, 3.5vw, 3rem)',
+                lineHeight: 1.12,
+                letterSpacing: '-0.025em',
                 color: 'var(--text-dark)',
                 fontWeight: 800,
-                marginBottom: '28px',
+                marginBottom: '20px',
                 textTransform: 'uppercase'
               }}
             >
-              RAISING THE <span style={{ color: 'var(--accent-amber)' }}>NEXT GENERATION</span> <br />
+              RAISING THE <span style={{ color: 'var(--accent-amber)' }}>NEXT GENERATION</span> <br className="desktop-only" />
               IN A WORLD THAT HAS ALREADY CHANGED
             </h2>
 
             {/* Major Visual Statement */}
             <div
               style={{
-                padding: '32px 36px',
+                padding: '24px 28px',
                 backgroundColor: 'var(--bg-light)',
                 borderLeft: '4px solid var(--accent-terracotta)',
-                marginBottom: '36px'
+                marginBottom: '28px'
               }}
             >
               <h3
                 className="serif-italic"
                 style={{
-                  fontSize: 'clamp(1.4rem, 2.2vw, 2rem)',
-                  lineHeight: 1.35,
+                  fontSize: 'clamp(1.15rem, 1.8vw, 1.7rem)',
+                  lineHeight: 1.4,
                   color: 'var(--text-dark)',
                   margin: 0,
                   fontWeight: 600
@@ -85,7 +84,7 @@ export default function BookPositioning({ onBuyClick }) {
 
             <button onClick={onBuyClick} className="btn-primary">
               BUY SALVAGE AGENDA NOW
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
             </button>
           </div>
         </div>
@@ -97,7 +96,7 @@ export default function BookPositioning({ onBuyClick }) {
             grid-column: span 12 !important;
           }
           .positioning-book-col {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
           }
         }
       `}</style>

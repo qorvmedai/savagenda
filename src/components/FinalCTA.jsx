@@ -11,8 +11,8 @@ export default function FinalCTA({ onBuyClick, price, currency }) {
         backgroundColor: 'var(--bg-dark)',
         color: '#FFFFFF',
         position: 'relative',
-        paddingTop: 'clamp(100px, 14vw, 160px)',
-        paddingBottom: 'clamp(100px, 14vw, 160px)',
+        paddingTop: 'clamp(80px, 10vw, 140px)',
+        paddingBottom: 'clamp(80px, 10vw, 140px)',
         borderTop: '1px solid var(--border-dark)'
       }}
     >
@@ -25,10 +25,10 @@ export default function FinalCTA({ onBuyClick, price, currency }) {
           transform: 'translate(-50%, -50%)',
           width: '70vw',
           height: '70vw',
-          maxWidth: '800px',
-          maxHeight: '800px',
+          maxWidth: '700px',
+          maxHeight: '700px',
           background: 'radial-gradient(circle, rgba(217, 119, 6, 0.16) 0%, rgba(194, 94, 46, 0.04) 50%, transparent 80%)',
-          filter: 'blur(90px)',
+          filter: 'blur(80px)',
           pointerEvents: 'none'
         }}
       />
@@ -40,21 +40,21 @@ export default function FinalCTA({ onBuyClick, price, currency }) {
           {SITE_CONFIG.TITLE} • FINAL CALL
         </div>
 
-        {/* Oversized Statement */}
+        {/* Oversized Statement (Fluid & Mobile Break Safe) */}
         <h2
           style={{
-            fontSize: 'clamp(2.4rem, 5.5vw, 5rem)',
-            lineHeight: 1.05,
-            letterSpacing: '-0.035em',
+            fontSize: 'clamp(1.45rem, 4.5vw, 4.2rem)',
+            lineHeight: 1.12,
+            letterSpacing: '-0.025em',
             fontWeight: 800,
             color: '#FFFFFF',
             textTransform: 'uppercase',
-            maxWidth: '1100px',
-            margin: '0 auto 40px'
+            maxWidth: '1050px',
+            margin: '0 auto 36px'
           }}
         >
-          DON'T PREPARE YOUR CHILD <br />
-          <span style={{ color: 'var(--accent-terracotta)' }}>FOR THE WORLD YOU SURVIVED.</span> <br />
+          DON'T PREPARE YOUR CHILD <br className="desktop-only" />
+          <span style={{ color: 'var(--accent-terracotta)' }}>FOR THE WORLD YOU SURVIVED.</span> <br className="desktop-only" />
           <span style={{ color: 'var(--accent-amber)' }}>PREPARE THEM FOR THE WORLD THEY WILL INHERIT.</span>
         </h2>
 
@@ -65,17 +65,17 @@ export default function FinalCTA({ onBuyClick, price, currency }) {
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '16px',
-            marginBottom: '48px'
+            gap: '12px',
+            marginBottom: '36px'
           }}
         >
           <span
             style={{
-              padding: '10px 20px',
+              padding: '8px 16px',
               backgroundColor: 'rgba(255, 255, 255, 0.08)',
               border: '1px solid var(--border-dark)',
               borderRadius: '2px',
-              fontSize: '0.95rem',
+              fontSize: '0.85rem',
               fontWeight: 700,
               color: '#FFFFFF'
             }}
@@ -85,11 +85,11 @@ export default function FinalCTA({ onBuyClick, price, currency }) {
 
           <span
             style={{
-              padding: '10px 20px',
+              padding: '8px 16px',
               backgroundColor: 'rgba(217, 119, 6, 0.15)',
               border: '1px solid rgba(217, 119, 6, 0.3)',
               borderRadius: '2px',
-              fontSize: '0.95rem',
+              fontSize: '0.85rem',
               fontWeight: 700,
               color: 'var(--accent-amber)'
             }}
@@ -104,13 +104,13 @@ export default function FinalCTA({ onBuyClick, price, currency }) {
             onClick={onBuyClick}
             className="btn-dark-primary"
             style={{
-              padding: '22px 48px',
-              fontSize: '1.15rem'
+              padding: '18px 36px',
+              fontSize: '1.05rem'
             }}
           >
-            <ShoppingBag size={22} />
+            <ShoppingBag size={20} />
             BUY SALVAGE AGENDA
-            <ArrowRight size={22} />
+            <ArrowRight size={20} />
           </button>
         </div>
       </div>

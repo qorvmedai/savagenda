@@ -23,7 +23,7 @@ export default function CentralIdea() {
     >
       <div className="container">
         {/* Giant Headline */}
-        <div style={{ textAlign: 'center', maxWidth: '960px', margin: '0 auto 64px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '960px', margin: '0 auto 48px' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>
             <span className="eyebrow-dot"></span>
             THE CORE PHILOSOPHY
@@ -31,28 +31,28 @@ export default function CentralIdea() {
 
           <h2
             style={{
-              fontSize: 'clamp(2.2rem, 4.8vw, 4.4rem)',
-              lineHeight: 1.08,
-              letterSpacing: '-0.03em',
+              fontSize: 'clamp(1.45rem, 4.2vw, 3.8rem)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.025em',
               fontWeight: 800,
               color: 'var(--text-dark)',
               textTransform: 'uppercase'
             }}
           >
-            THE <span style={{ color: 'var(--accent-amber)', underline: 'underline' }}>DESTINATION</span> CAN STAY THE SAME. <br />
+            THE <span style={{ color: 'var(--accent-amber)' }}>DESTINATION</span> CAN STAY THE SAME. <br className="desktop-only" />
             THE <span style={{ color: 'var(--accent-terracotta)' }}>STRATEGY</span> MAY HAVE TO CHANGE.
           </h2>
         </div>
 
         {/* Values Grid */}
-        <div style={{ maxWidth: '1000px', margin: '0 auto 64px' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto 48px' }}>
           <p
             style={{
-              fontSize: 'clamp(1.1rem, 1.4vw, 1.25rem)',
+              fontSize: 'clamp(1rem, 1.2vw, 1.15rem)',
               textAlign: 'center',
               color: 'var(--text-dark)',
               fontWeight: 600,
-              marginBottom: '36px'
+              marginBottom: '28px'
             }}
           >
             These timeless anchor values do not need to be abandoned:
@@ -61,8 +61,8 @@ export default function CentralIdea() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '24px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: '18px'
             }}
           >
             {values.map((v, i) => {
@@ -71,7 +71,7 @@ export default function CentralIdea() {
                 <div
                   key={i}
                   style={{
-                    padding: '32px 28px',
+                    padding: '24px 20px',
                     backgroundColor: 'var(--bg-light)',
                     border: '1px solid var(--border-light)',
                     borderRadius: '2px',
@@ -79,22 +79,22 @@ export default function CentralIdea() {
                     overflow: 'hidden'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '12px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
                     <div
                       style={{
-                        padding: '10px',
+                        padding: '8px',
                         borderRadius: '4px',
                         backgroundColor: 'rgba(217, 119, 6, 0.1)',
                         color: 'var(--accent-amber)'
                       }}
                     >
-                      <IconComp size={22} />
+                      <IconComp size={20} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-dark)' }}>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-dark)' }}>
                       {v.name}
                     </h3>
                   </div>
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', margin: 0 }}>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: 0 }}>
                     {v.desc}
                   </p>
                 </div>
@@ -106,14 +106,14 @@ export default function CentralIdea() {
         {/* Narrative Banner & Declaration */}
         <div
           style={{
-            padding: 'clamp(36px, 5vw, 56px)',
+            padding: 'clamp(28px, 4vw, 48px)',
             background: 'linear-gradient(135deg, var(--bg-dark) 0%, #171A21 100%)',
             color: '#FFFFFF',
             borderRadius: '4px',
             textAlign: 'center',
             maxWidth: '960px',
             margin: '0 auto',
-            boxShadow: '0 20px 50px rgba(0,0,0,0.15)',
+            boxShadow: '0 16px 40px rgba(0,0,0,0.15)',
             border: '1px solid var(--border-dark)',
             position: 'relative',
             overflow: 'hidden'
@@ -133,11 +133,11 @@ export default function CentralIdea() {
           <p
             style={{
               fontFamily: 'var(--font-serif)',
-              fontSize: 'clamp(1.4rem, 2.4vw, 2rem)',
+              fontSize: 'clamp(1.15rem, 2vw, 1.75rem)',
               fontStyle: 'italic',
               color: '#FFFFFF',
               lineHeight: 1.4,
-              marginBottom: '20px',
+              marginBottom: '16px',
               fontWeight: 400
             }}
           >
@@ -148,11 +148,11 @@ export default function CentralIdea() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '6px',
+              gap: '4px',
               fontFamily: 'var(--font-sans)',
               fontWeight: 800,
-              fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)',
-              letterSpacing: '0.08em',
+              fontSize: 'clamp(0.95rem, 1.5vw, 1.3rem)',
+              letterSpacing: '0.05em',
               color: 'var(--accent-amber)',
               textTransform: 'uppercase'
             }}

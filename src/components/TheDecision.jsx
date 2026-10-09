@@ -22,7 +22,7 @@ export default function TheDecision() {
     >
       <div className="container">
         {/* Section Header */}
-        <div style={{ maxWidth: '880px', margin: '0 auto 60px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '880px', margin: '0 auto 48px', textAlign: 'center' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>
             <span className="eyebrow-dot"></span>
             THE CHOICE BEFORE YOU
@@ -30,13 +30,13 @@ export default function TheDecision() {
 
           <h2
             style={{
-              fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
+              fontSize: 'clamp(1.8rem, 4.5vw, 4rem)',
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
               fontWeight: 800,
               color: 'var(--text-dark)',
               textTransform: 'uppercase',
-              marginBottom: '28px'
+              marginBottom: '20px'
             }}
           >
             THE DECISION
@@ -45,7 +45,7 @@ export default function TheDecision() {
           <p
             className="serif-italic"
             style={{
-              fontSize: 'clamp(1.3rem, 2.2vw, 1.8rem)',
+              fontSize: 'clamp(1.1rem, 1.8vw, 1.6rem)',
               color: 'var(--accent-terracotta)',
               fontWeight: 500,
               margin: 0
@@ -56,16 +56,16 @@ export default function TheDecision() {
         </div>
 
         {/* What You Cannot Do */}
-        <div style={{ maxWidth: '780px', margin: '0 auto 48px' }}>
+        <div style={{ maxWidth: '780px', margin: '0 auto 36px' }}>
           <div
             style={{
-              padding: '32px 36px',
+              padding: '24px 28px',
               backgroundColor: 'var(--bg-light)',
               border: '1px solid var(--border-light)',
               borderRadius: '4px',
               display: 'flex',
               flexDirection: 'column',
-              gap: '14px'
+              gap: '10px'
             }}
           >
             {[
@@ -77,11 +77,11 @@ export default function TheDecision() {
               <p
                 key={cIdx}
                 style={{
-                  fontSize: 'clamp(1.02rem, 1.2vw, 1.15rem)',
+                  fontSize: 'clamp(0.88rem, 1.05vw, 1.02rem)',
                   color: 'var(--text-muted)',
                   fontWeight: 500,
                   margin: 0,
-                  lineHeight: 1.5
+                  lineHeight: 1.45
                 }}
               >
                 • {cannot}
@@ -91,15 +91,15 @@ export default function TheDecision() {
         </div>
 
         {/* Transition Highlight */}
-        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <span
             style={{
               fontFamily: 'var(--font-sans)',
-              fontSize: 'clamp(1.8rem, 3.2vw, 2.8rem)',
+              fontSize: 'clamp(1.25rem, 2.5vw, 2.2rem)',
               fontWeight: 900,
               color: 'var(--accent-amber)',
               textTransform: 'uppercase',
-              letterSpacing: '0.04em'
+              letterSpacing: '0.02em'
             }}
           >
             BUT YOU CAN PREPARE THEM.
@@ -107,12 +107,12 @@ export default function TheDecision() {
         </div>
 
         {/* Actionable Progression List */}
-        <div style={{ maxWidth: '880px', margin: '0 auto 64px' }}>
+        <div style={{ maxWidth: '880px', margin: '0 auto 48px' }}>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '18px'
+              gap: '14px'
             }}
           >
             {progressions.map((prog, pIdx) => {
@@ -123,32 +123,32 @@ export default function TheDecision() {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '20px',
-                    padding: '24px 28px',
+                    gap: '14px',
+                    padding: '18px 20px',
                     backgroundColor: '#FFFFFF',
                     border: '1px solid var(--border-light)',
-                    boxShadow: '0 4px 14px rgba(0,0,0,0.02)',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
                     borderRadius: '3px'
                   }}
                 >
                   <div
                     style={{
-                      padding: '10px',
+                      padding: '8px',
                       backgroundColor: 'rgba(217, 119, 6, 0.1)',
                       color: 'var(--accent-amber)',
                       borderRadius: '4px',
                       flexShrink: 0
                     }}
                   >
-                    <IconComp size={22} />
+                    <IconComp size={18} />
                   </div>
                   <p
                     style={{
-                      fontSize: 'clamp(1.05rem, 1.25vw, 1.2rem)',
+                      fontSize: 'clamp(0.92rem, 1.05vw, 1.08rem)',
                       fontWeight: 700,
                       color: 'var(--text-dark)',
                       margin: 0,
-                      lineHeight: 1.5
+                      lineHeight: 1.45
                     }}
                   >
                     {prog.text}
@@ -165,7 +165,7 @@ export default function TheDecision() {
             maxWidth: '820px',
             margin: '0 auto',
             textAlign: 'center',
-            padding: '36px 40px',
+            padding: '28px 32px',
             backgroundColor: 'var(--text-dark)',
             color: '#FFFFFF',
             borderRadius: '4px'
@@ -173,11 +173,11 @@ export default function TheDecision() {
         >
           <p
             style={{
-              fontSize: 'clamp(1.3rem, 2.2vw, 1.8rem)',
+              fontSize: 'clamp(1.05rem, 1.8vw, 1.55rem)',
               fontWeight: 800,
               color: 'var(--accent-amber)',
               margin: 0,
-              letterSpacing: '0.05em',
+              letterSpacing: '0.04em',
               textTransform: 'uppercase'
             }}
           >

@@ -15,7 +15,7 @@ export default function AuthorSection() {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: 'clamp(32px, 5vw, 64px)',
+            gap: 'clamp(24px, 4vw, 56px)',
             alignItems: 'center'
           }}
         >
@@ -31,18 +31,19 @@ export default function AuthorSection() {
             <div
               style={{
                 position: 'relative',
-                maxWidth: '400px',
-                width: '100%'
+                maxWidth: '340px',
+                width: '100%',
+                padding: '8px'
               }}
             >
               {/* Tasteful editorial framing around portrait */}
               <div
                 style={{
                   position: 'absolute',
-                  top: '-12px',
-                  left: '-12px',
-                  right: '12px',
-                  bottom: '12px',
+                  top: 0,
+                  left: 0,
+                  right: '16px',
+                  bottom: '16px',
                   border: '2px solid var(--accent-amber)',
                   borderRadius: '4px',
                   zIndex: 0,
@@ -58,7 +59,7 @@ export default function AuthorSection() {
                   height: 'auto',
                   objectFit: 'cover',
                   borderRadius: '3px',
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                  boxShadow: '0 16px 36px rgba(0,0,0,0.12)',
                   position: 'relative',
                   zIndex: 1
                 }}
@@ -76,27 +77,27 @@ export default function AuthorSection() {
 
             <h2
               style={{
-                fontSize: 'clamp(2rem, 3.5vw, 3.2rem)',
-                lineHeight: 1.1,
-                letterSpacing: '-0.03em',
+                fontSize: 'clamp(1.45rem, 3.5vw, 3rem)',
+                lineHeight: 1.12,
+                letterSpacing: '-0.025em',
                 color: 'var(--text-dark)',
                 fontWeight: 800,
-                marginBottom: '24px',
+                marginBottom: '20px',
                 textTransform: 'uppercase'
               }}
             >
-              WHY <span style={{ color: 'var(--accent-amber)' }}>PATRICK ANIETIE JOHN</span> <br />
+              WHY <span style={{ color: 'var(--accent-amber)' }}>PATRICK ANIETIE JOHN</span> <br className="desktop-only" />
               WROTE THIS BOOK
             </h2>
 
             {/* Credentials / Bio Highlights */}
-            <div style={{ marginBottom: '28px' }}>
+            <div style={{ marginBottom: '24px' }}>
               <p
                 style={{
-                  fontSize: '1.2rem',
+                  fontSize: 'clamp(1.05rem, 1.3vw, 1.2rem)',
                   fontWeight: 700,
                   color: 'var(--text-dark)',
-                  marginBottom: '12px'
+                  marginBottom: '10px'
                 }}
               >
                 Founder of Awesome Planet
@@ -104,10 +105,10 @@ export default function AuthorSection() {
 
               <p
                 style={{
-                  fontSize: '1rem',
+                  fontSize: 'clamp(0.9rem, 1vw, 1rem)',
                   color: 'var(--text-muted)',
-                  lineHeight: 1.7,
-                  marginBottom: '20px'
+                  lineHeight: 1.65,
+                  marginBottom: '16px'
                 }}
               >
                 Patrick Anietie John is the founder of <strong>Awesome Planet</strong>, a globally recognized organization dedicated to building stronger families for a better society.
@@ -117,8 +118,8 @@ export default function AuthorSection() {
                 style={{
                   display: 'flex',
                   flexWrap: 'wrap',
-                  gap: '12px',
-                  marginBottom: '28px'
+                  gap: '8px',
+                  marginBottom: '24px'
                 }}
               >
                 {[
@@ -130,10 +131,10 @@ export default function AuthorSection() {
                   <span
                     key={bIdx}
                     style={{
-                      fontSize: '0.8rem',
+                      fontSize: '0.75rem',
                       fontWeight: 700,
-                      letterSpacing: '0.05em',
-                      padding: '8px 16px',
+                      letterSpacing: '0.04em',
+                      padding: '6px 12px',
                       backgroundColor: '#FFFFFF',
                       border: '1px solid var(--border-light)',
                       borderRadius: '2px',
@@ -145,7 +146,7 @@ export default function AuthorSection() {
                 ))}
               </div>
 
-              <p style={{ fontSize: '1rem', color: 'var(--text-muted)', lineHeight: 1.7 }}>
+              <p style={{ fontSize: 'clamp(0.9rem, 1vw, 1rem)', color: 'var(--text-muted)', lineHeight: 1.65 }}>
                 Through family counselling, keynote public speaking, and confidential advisory work with high-profile families across America and Europe, Patrick has observed firsthand the profound gap between traditional parenting intentions and modern youth outcomes.
               </p>
             </div>
@@ -153,20 +154,20 @@ export default function AuthorSection() {
             {/* Core Author Philosophy Highlight */}
             <div
               style={{
-                padding: '28px 32px',
+                padding: '20px 24px',
                 backgroundColor: '#FFFFFF',
                 borderLeft: '4px solid var(--accent-amber)',
                 borderRadius: '0 4px 4px 0',
-                boxShadow: '0 6px 20px rgba(0,0,0,0.03)'
+                boxShadow: '0 4px 16px rgba(0,0,0,0.03)'
               }}
             >
               <p
                 className="serif-italic"
                 style={{
-                  fontSize: 'clamp(1.2rem, 1.8vw, 1.5rem)',
+                  fontSize: 'clamp(1.05rem, 1.5vw, 1.35rem)',
                   lineHeight: 1.4,
                   color: 'var(--text-dark)',
-                  marginBottom: '12px',
+                  marginBottom: '8px',
                   fontWeight: 600
                 }}
               >
@@ -175,7 +176,7 @@ export default function AuthorSection() {
 
               <p
                 style={{
-                  fontSize: '1rem',
+                  fontSize: 'clamp(0.88rem, 1vw, 0.98rem)',
                   fontWeight: 700,
                   color: 'var(--accent-terracotta)',
                   margin: 0
@@ -194,7 +195,7 @@ export default function AuthorSection() {
             grid-column: span 12 !important;
           }
           .author-img-col {
-            margin-bottom: 40px;
+            margin-bottom: 28px;
           }
         }
       `}</style>

@@ -14,7 +14,7 @@ export default function OfferSection({ onBuyClick, price, currency }) {
       }}
     >
       <div className="container">
-        <div style={{ maxWidth: '840px', margin: '0 auto 60px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '840px', margin: '0 auto 48px', textAlign: 'center' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>
             <span className="eyebrow-dot"></span>
             OFFICIAL RELEASE OFFER
@@ -22,19 +22,19 @@ export default function OfferSection({ onBuyClick, price, currency }) {
 
           <h2
             style={{
-              fontSize: 'clamp(2.2rem, 4.5vw, 4rem)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.03em',
+              fontSize: 'clamp(1.6rem, 4vw, 3.6rem)',
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
               fontWeight: 800,
               color: 'var(--text-dark)',
               textTransform: 'uppercase',
-              marginBottom: '14px'
+              marginBottom: '12px'
             }}
           >
             SALVAGE AGENDA
           </h2>
 
-          <p style={{ fontSize: 'clamp(1.1rem, 1.4vw, 1.35rem)', color: 'var(--accent-terracotta)', fontWeight: 600 }}>
+          <p style={{ fontSize: 'clamp(1rem, 1.2vw, 1.2rem)', color: 'var(--accent-terracotta)', fontWeight: 600 }}>
             {SITE_CONFIG.SUBTITLE}
           </p>
         </div>
@@ -47,8 +47,8 @@ export default function OfferSection({ onBuyClick, price, currency }) {
             backgroundColor: 'var(--bg-light)',
             border: '2px solid var(--accent-amber)',
             borderRadius: '6px',
-            padding: 'clamp(32px, 5vw, 64px)',
-            boxShadow: '0 24px 60px rgba(217, 119, 6, 0.15)',
+            padding: 'clamp(24px, 4vw, 48px)',
+            boxShadow: '0 16px 40px rgba(217, 119, 6, 0.12)',
             position: 'relative',
             overflow: 'hidden'
           }}
@@ -60,7 +60,7 @@ export default function OfferSection({ onBuyClick, price, currency }) {
               top: 0,
               left: 0,
               right: 0,
-              height: '6px',
+              height: '5px',
               backgroundColor: 'var(--accent-amber)'
             }}
           />
@@ -69,7 +69,7 @@ export default function OfferSection({ onBuyClick, price, currency }) {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(12, 1fr)',
-              gap: 'clamp(32px, 4vw, 48px)',
+              gap: 'clamp(24px, 4vw, 48px)',
               alignItems: 'center'
             }}
           >
@@ -84,7 +84,6 @@ export default function OfferSection({ onBuyClick, price, currency }) {
                   src={SITE_CONFIG.BOOK_COVER_IMAGE}
                   alt="SALVAGE Agenda Book Cover"
                   className="book-cover-img"
-                  style={{ maxWidth: '340px' }}
                   loading="lazy"
                 />
               </div>
@@ -94,13 +93,13 @@ export default function OfferSection({ onBuyClick, price, currency }) {
             <div style={{ gridColumn: 'span 7' }} className="offer-details-col">
               <span
                 style={{
-                  fontSize: '0.8rem',
+                  fontSize: '0.75rem',
                   fontWeight: 800,
-                  letterSpacing: '0.12em',
+                  letterSpacing: '0.1em',
                   color: 'var(--accent-amber)',
                   textTransform: 'uppercase',
                   display: 'block',
-                  marginBottom: '8px'
+                  marginBottom: '6px'
                 }}
               >
                 AUTHOR DIRECT EDITION
@@ -108,10 +107,10 @@ export default function OfferSection({ onBuyClick, price, currency }) {
 
               <h3
                 style={{
-                  fontSize: '1.8rem',
+                  fontSize: 'clamp(1.2rem, 1.8vw, 1.6rem)',
                   fontWeight: 800,
                   color: 'var(--text-dark)',
-                  marginBottom: '16px',
+                  marginBottom: '14px',
                   textTransform: 'uppercase'
                 }}
               >
@@ -123,20 +122,20 @@ export default function OfferSection({ onBuyClick, price, currency }) {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'baseline',
-                  gap: '12px',
-                  marginBottom: '24px',
-                  padding: '16px 20px',
+                  gap: '10px',
+                  marginBottom: '20px',
+                  padding: '12px 18px',
                   backgroundColor: '#FFFFFF',
                   border: '1px solid var(--border-light)',
                   borderRadius: '4px'
                 }}
               >
-                <span style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+                <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-muted)' }}>
                   PRICE:
                 </span>
                 <span
                   style={{
-                    fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)',
+                    fontSize: 'clamp(1.5rem, 2.2vw, 2rem)',
                     fontWeight: 800,
                     color: 'var(--text-dark)'
                   }}
@@ -150,20 +149,20 @@ export default function OfferSection({ onBuyClick, price, currency }) {
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '14px',
-                  marginBottom: '32px'
+                  gap: '12px',
+                  marginBottom: '24px'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <CheckCircle2 size={20} color="var(--accent-amber)" />
-                  <span style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-dark)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <CheckCircle2 size={18} color="var(--accent-amber)" style={{ flexShrink: 0 }} />
+                  <span style={{ fontSize: 'clamp(0.88rem, 1vw, 0.98rem)', fontWeight: 600, color: 'var(--text-dark)' }}>
                     Complete <strong>SALVAGE Agenda</strong> Book
                   </span>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <MessageSquare size={20} color="var(--accent-terracotta)" />
-                  <span style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-dark)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <MessageSquare size={18} color="var(--accent-terracotta)" style={{ flexShrink: 0 }} />
+                  <span style={{ fontSize: 'clamp(0.88rem, 1vw, 0.98rem)', fontWeight: 600, color: 'var(--text-dark)' }}>
                     <strong>{SITE_CONFIG.BONUS_COMMUNITY}</strong> (Included)
                   </span>
                 </div>
@@ -176,19 +175,19 @@ export default function OfferSection({ onBuyClick, price, currency }) {
                 style={{
                   width: '100%',
                   justify: 'center',
-                  padding: '20px 32px',
-                  fontSize: '1.05rem',
-                  marginBottom: '16px'
+                  padding: '16px 24px',
+                  fontSize: '0.95rem',
+                  marginBottom: '14px'
                 }}
               >
                 BUY SALVAGE AGENDA
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </button>
 
               {/* Secondary Reassurance */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
-                <ShieldCheck size={16} color="var(--accent-amber)" />
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 500 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', justifyContent: 'center' }}>
+                <ShieldCheck size={15} color="var(--accent-amber)" />
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>
                   A practical guide for parents and future parents navigating a changing world.
                 </span>
               </div>
@@ -203,7 +202,7 @@ export default function OfferSection({ onBuyClick, price, currency }) {
             grid-column: span 12 !important;
           }
           .offer-img-col {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
           }
         }
       `}</style>

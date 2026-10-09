@@ -20,7 +20,7 @@ export default function NoPerfectParent() {
       }}
     >
       <div className="container">
-        <div style={{ maxWidth: '900px', margin: '0 auto 64px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto 48px', textAlign: 'center' }}>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>
             <span className="eyebrow-dot"></span>
             COMPASSIONATE INTENTIONALITY
@@ -28,26 +28,26 @@ export default function NoPerfectParent() {
 
           <h2
             style={{
-              fontSize: 'clamp(2.1rem, 4vw, 3.6rem)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.03em',
+              fontSize: 'clamp(1.45rem, 3.8vw, 3.4rem)',
+              lineHeight: 1.12,
+              letterSpacing: '-0.025em',
               fontWeight: 800,
               color: 'var(--text-dark)',
               textTransform: 'uppercase'
             }}
           >
-            THIS IS NOT ANOTHER BOOK <br />
+            THIS IS NOT ANOTHER BOOK <br className="desktop-only" />
             <span style={{ color: 'var(--accent-terracotta)' }}>TELLING YOU TO BE A PERFECT PARENT.</span>
           </h2>
         </div>
 
         {/* Short Editorial Statements with Generous Whitespace */}
-        <div style={{ maxWidth: '780px', margin: '0 auto 64px' }}>
+        <div style={{ maxWidth: '780px', margin: '0 auto 48px' }}>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '24px',
+              gap: '18px',
               textAlign: 'center'
             }}
           >
@@ -55,10 +55,10 @@ export default function NoPerfectParent() {
               <p
                 key={idx}
                 style={{
-                  fontSize: 'clamp(1.15rem, 1.6vw, 1.45rem)',
+                  fontSize: 'clamp(1.05rem, 1.4vw, 1.35rem)',
                   fontWeight: idx === statements.length - 1 ? 800 : 500,
                   color: idx === statements.length - 1 ? 'var(--accent-amber)' : 'var(--text-dark)',
-                  lineHeight: 1.5,
+                  lineHeight: 1.45,
                   margin: 0,
                   fontFamily: idx === statements.length - 1 ? 'var(--font-sans)' : 'var(--font-serif)',
                   fontStyle: idx === statements.length - 1 ? 'normal' : 'italic'
@@ -75,7 +75,7 @@ export default function NoPerfectParent() {
           style={{
             maxWidth: '820px',
             margin: '0 auto',
-            padding: '36px 40px',
+            padding: '24px clamp(16px, 3vw, 32px)',
             backgroundColor: 'var(--bg-light)',
             borderLeft: '4px solid var(--accent-amber)',
             borderRadius: '0 4px 4px 0',
@@ -84,14 +84,14 @@ export default function NoPerfectParent() {
         >
           <p
             style={{
-              fontSize: 'clamp(1.2rem, 1.8vw, 1.5rem)',
+              fontSize: 'clamp(1.05rem, 1.5vw, 1.35rem)',
               fontWeight: 800,
               color: 'var(--text-dark)',
               margin: 0,
               lineHeight: 1.4
             }}
           >
-            SALVAGE Agenda is not asking you to become perfect. <br />
+            SALVAGE Agenda is not asking you to become perfect. <br className="desktop-only" />
             <span style={{ color: 'var(--accent-amber)' }}>It is asking you to become intentional.</span>
           </p>
         </div>

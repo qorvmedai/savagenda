@@ -13,10 +13,9 @@ export default function Hero({ onBuyClick }) {
       id="hero"
       className="section-shell"
       style={{
-        paddingTop: 'clamp(120px, 15vw, 170px)',
-        paddingBottom: 'clamp(80px, 10vw, 130px)',
+        paddingTop: 'clamp(100px, 12vw, 160px)',
+        paddingBottom: 'clamp(60px, 8vw, 120px)',
         position: 'relative',
-        overflow: 'hidden',
         backgroundColor: 'var(--bg-light)'
       }}
     >
@@ -28,10 +27,10 @@ export default function Hero({ onBuyClick }) {
           right: '-10%',
           width: '65vw',
           height: '65vw',
-          maxWidth: '850px',
-          maxHeight: '850px',
+          maxWidth: '700px',
+          maxHeight: '700px',
           background: 'radial-gradient(circle, rgba(217, 119, 6, 0.12) 0%, rgba(194, 94, 46, 0.04) 45%, transparent 70%)',
-          filter: 'blur(70px)',
+          filter: 'blur(60px)',
           pointerEvents: 'none',
           zIndex: 0
         }}
@@ -42,7 +41,7 @@ export default function Hero({ onBuyClick }) {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: 'clamp(32px, 5vw, 64px)',
+            gap: 'clamp(24px, 4vw, 56px)',
             alignItems: 'center'
           }}
         >
@@ -59,32 +58,34 @@ export default function Hero({ onBuyClick }) {
               {SITE_CONFIG.TITLE} • A MODERN PARENTING GUIDE
             </div>
 
-            {/* Dominant Hero Headline */}
+            {/* Dominant Hero Headline (Fluid & Responsive) */}
             <h1
               style={{
-                fontSize: 'clamp(2rem, 3.8vw, 3.6rem)',
-                lineHeight: 1.1,
-                letterSpacing: '-0.03em',
+                fontSize: 'clamp(1.45rem, 4.2vw, 3.4rem)',
+                lineHeight: 1.15,
+                letterSpacing: '-0.025em',
                 color: 'var(--text-dark)',
-                marginBottom: '28px',
+                marginBottom: '24px',
                 fontWeight: 800,
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
+                maxWidth: '100%',
+                wordBreak: 'break-word'
               }}
             >
-              WHAT IF THE PARENTING <br />
-              <span style={{ color: 'var(--accent-terracotta)' }}>THAT MADE YOU</span> WHO YOU ARE <br />
-              IS THE VERY THING LIMITING <br />
+              WHAT IF THE PARENTING <br className="desktop-only" />
+              <span style={{ color: 'var(--accent-terracotta)' }}>THAT MADE YOU</span> WHO YOU ARE <br className="desktop-only" />
+              IS THE VERY THING LIMITING <br className="desktop-only" />
               <span style={{ color: 'var(--accent-amber)' }}>WHO YOUR CHILD</span> CAN BECOME?
             </h1>
 
             {/* Supporting Copy & Narrative */}
-            <div style={{ maxWidth: '620px', marginBottom: '36px' }}>
+            <div style={{ maxWidth: '620px', marginBottom: '32px' }}>
               <p
                 style={{
-                  fontSize: 'clamp(1.1rem, 1.3vw, 1.25rem)',
+                  fontSize: 'clamp(1.05rem, 1.2vw, 1.2rem)',
                   fontWeight: 600,
                   color: 'var(--text-dark)',
-                  marginBottom: '16px',
+                  marginBottom: '14px',
                   fontStyle: 'italic',
                   fontFamily: 'var(--font-serif)'
                 }}
@@ -94,10 +95,10 @@ export default function Hero({ onBuyClick }) {
 
               <p
                 style={{
-                  fontSize: 'clamp(0.98rem, 1.1vw, 1.05rem)',
-                  lineHeight: 1.7,
+                  fontSize: 'clamp(0.92rem, 1vw, 1.02rem)',
+                  lineHeight: 1.65,
                   color: 'var(--text-muted)',
-                  marginBottom: '20px'
+                  marginBottom: '18px'
                 }}
               >
                 Today’s children are growing up in a world shaped by artificial intelligence, social media algorithms, digital micro-economies, and global connectivity—opportunities and pressures that did not exist when their parents were young.
@@ -105,7 +106,7 @@ export default function Hero({ onBuyClick }) {
 
               <div
                 style={{
-                  padding: '16px 20px',
+                  padding: '14px 18px',
                   backgroundColor: 'rgba(217, 119, 6, 0.07)',
                   borderLeft: '3px solid var(--accent-amber)',
                   borderRadius: '0 4px 4px 0'
@@ -113,10 +114,11 @@ export default function Hero({ onBuyClick }) {
               >
                 <p
                   style={{
-                    fontSize: '1rem',
+                    fontSize: 'clamp(0.88rem, 1vw, 0.98rem)',
                     fontWeight: 700,
                     color: 'var(--text-dark)',
-                    margin: 0
+                    margin: 0,
+                    lineHeight: 1.5
                   }}
                 >
                   The central conflict is simple yet profound: <span style={{ color: 'var(--accent-terracotta)' }}>Parents are raising children for a world that no longer exists.</span>
@@ -130,16 +132,16 @@ export default function Hero({ onBuyClick }) {
                 display: 'flex',
                 flexWrap: 'wrap',
                 alignItems: 'center',
-                gap: '18px'
+                gap: '14px'
               }}
             >
               <button onClick={onBuyClick} className="btn-primary">
                 GET SALVAGE AGENDA
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </button>
 
               <button onClick={scrollToExplore} className="btn-secondary">
-                <BookOpen size={18} />
+                <BookOpen size={16} />
                 EXPLORE THE BOOK
               </button>
             </div>
@@ -162,8 +164,6 @@ export default function Hero({ onBuyClick }) {
                 src={SITE_CONFIG.BOOK_COVER_IMAGE}
                 alt="SALVAGE Agenda Book Cover by Patrick Anietie John"
                 className="book-cover-img"
-                width="420"
-                height="620"
                 loading="eager"
               />
             </div>
@@ -178,7 +178,7 @@ export default function Hero({ onBuyClick }) {
           }
           .hero-right-col {
             grid-column: span 12 !important;
-            margin-top: 40px;
+            margin-top: 32px;
           }
         }
       `}</style>

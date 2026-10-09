@@ -7,10 +7,10 @@
 
 export const SITE_CONFIG = {
   // Configurable Purchase Destination
-  BOOK_PURCHASE_URL: "#checkout", // Replace with actual payment link or leave as #checkout to trigger modal
+  BOOK_PURCHASE_URL: "https://selar.com/91073101o0", // Direct Selar Payment Link
   
-  // Configurable Book Price Placeholder
-  DEFAULT_BOOK_PRICE: "[BOOK PRICE]", // Editable price placeholder (e.g., "15,000" or "25")
+  // Configurable Book Price
+  DEFAULT_BOOK_PRICE: "6,900",
   CURRENCY_SYMBOL: "₦",
 
   // Book Meta Details
